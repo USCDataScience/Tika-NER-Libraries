@@ -84,7 +84,7 @@ function refreshHzBarChart(){
 
     // Add text label in bar
     bar.append("text")
-        .attr("x", function(d) { if(x(d) < 80) return 80; else return x(d) - 3; })
+        .attr("x", function(d) { if(x(d) < 30) return x(d) + 7; else if(x(d) < 75) return x(d) - 7; else return x(d) - 53;})
         .attr("y", barHeight / 2)
         .attr("fill", function(d,i) { return color(i % data.series.length); })
         .attr("dy", ".35em")
