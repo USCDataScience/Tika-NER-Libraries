@@ -1,7 +1,7 @@
 function refreshHzBarChart(){
 
     console.log("entered refreshHzBarChart");
-    d3.json('json/testnltk.json', function(error, data) {
+    d3.json('json/test2000.json', function(error, data) {
     if (error) throw error;
 
        console.log("loaded data"); 
