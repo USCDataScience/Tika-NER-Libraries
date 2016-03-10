@@ -2,6 +2,7 @@ function refreshHzBarChart(){
 
     console.log("entered refreshHzBarChart");
     d3.json('json/compare500.json', function(error, data) {
+
     if (error) throw error;
 
        console.log("loaded data"); 
