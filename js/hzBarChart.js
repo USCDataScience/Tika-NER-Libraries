@@ -1,7 +1,7 @@
 function refreshHzBarChart(){
 
     console.log("entered refreshHzBarChart");
-    d3.json('json/test2000.json', function(error, data) {
+    d3.json('json/compare500.json', function(error, data) {
     if (error) throw error;
 
        console.log("loaded data"); 
@@ -84,7 +84,7 @@ function refreshHzBarChart(){
 
     // Add text label in bar
     bar.append("text")
-        .attr("x", function(d) { if(x(d) < 30) return x(d) + 7; else if(x(d) < 75) return x(d) - 7; else return x(d) - 53;})
+        .attr("x", function(d) { if(x(d) < 30) return x(d) + 5; else if(x(d) < 75) return x(d) - 10; else return x(d) - 60;})
         .attr("y", barHeight / 2)
         .attr("fill", function(d,i) { return color(i % data.series.length); })
         .attr("dy", ".35em")
