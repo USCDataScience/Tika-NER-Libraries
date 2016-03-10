@@ -15,7 +15,7 @@ function refreshHzBarChart(){
 
     //alert(data["labels"]);
 
-    var chartWidth       = 500,
+    var chartWidth       = 600,
         barHeight        = 14,
         groupHeight      = barHeight * data.series.length,
         gapBetweenGroups = 25,
@@ -43,7 +43,7 @@ function refreshHzBarChart(){
 
     var x = d3.scale.linear()
         .domain([0, d3.max(zippedData)])
-        .range([0, chartWidth]);
+        .range([0, chartWidth-100]);
 
     var y = d3.scale.linear()
         .range([chartHeight + gapBetweenGroups, 0]);
@@ -85,7 +85,7 @@ function refreshHzBarChart(){
 
     // Add text label in bar
     bar.append("text")
-        .attr("x", function(d) { if(x(d) < 30) return x(d) + 5; else if(x(d) < 75) return x(d) - 10; else return x(d) - 60;})
+        .attr("x", function(d) { if(x(d) < 80) return 80; else return x(d) - 3;})
         .attr("y", barHeight / 2)
         .attr("fill", function(d,i) { return color(i % data.series.length); })
         .attr("dy", ".35em")
