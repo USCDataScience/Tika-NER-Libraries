@@ -24,7 +24,7 @@ function refreshHzBarChart(){
         mylabels.push(data["series"][i]["name"].toUpperCase());
     }
 
-    var colorbar = ['#31a354','#dd1c77', '#2c7fb8']
+    var colorbar = ['#dd1c77', '#2c7fb8']
 
     var chartHeight = barHeight * zippedData.length + gapBetweenGroups * data.labels.length;
 
