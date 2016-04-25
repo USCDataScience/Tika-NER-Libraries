@@ -1,7 +1,7 @@
 function refreshHzBarChart(){
 
     console.log("entered refreshHzBarChart");
-    d3.json('json/nltk_vs_corenlp.json', function(error, data) {
+    d3.json('../json/compare_ner.json', function(error, data) {
     if (error) throw error;
 
     var chartWidth       = 600,
